@@ -1,0 +1,106 @@
+/*reset (básico) do css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*corpo da página*/
+body {
+  font-family: 'Courier New', Courier, monospace;
+  height: 100vh;
+  background-color:rgba(245, 245, 245, 0.4);
+}
+a{
+  text-decoration:none;
+}
+a:hover{
+color: blue;
+}
+p{
+  text-indent: 50px;
+  text-align: justify;
+
+}
+
+/*"PARTE DE CIMA DA PÁGINA" - cabeçalho, introdução e menu*/
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/*introdução*/
+#hello-world{
+  color:rgb(3, 3, 36);
+  font-weight:bolder;
+}
+div.intro {
+  position: absolute;
+  display: flexbox;
+  top:140px;
+  align-self: baseline;
+  padding: 10px;
+  
+}
+.site-title {
+  color: rgba(0,0,0,1);
+  text-align: center;
+}
+.site-subtitle {
+  color: rgba(0,0,0,0.8);
+  font-weight: lighter;
+  text-align: center;
+  font-size: 2em;
+}
+/*menu principal*/
+nav.menu {
+  position: relative;
+  top: auto;
+  width: 50vw;
+  align-self:center;
+}
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+.menu li {
+  list-style: none;
+  background-color: rgba(245, 245, 245, 0.1);
+    padding: 3px;
+    margin: 0.5px;
+    border: .3px solid rgba(245, 245, 245, 0.4);
+    -webkit-transition: background-color .3s;
+    -o-transition: background-color .3s;
+    transition: background-color .3s;
+    transition: border .3s;
+}
+.menu li:hover{
+  background-color: rgba(245, 245, 245,.8);
+  border: .1px solid white; 
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 1px 1px whitesmoke;
+}
+nav.menu a {
+  padding: 3px;
+  text-decoration: none;
+}
+/*Section e seus artigos*/
+div.interface-artigos{
+    
+    width:auto;
+    height:max-content;
+    background-color:white;
+    padding:30px;
+    box-shadow: 0px 0px 5px white;
+}
+/*Rodapé*/
+.rodape{
+  padding: 30px;
+  margin-top: 20px;
+}
+.rodape p{
+  text-indent:0px;
+  text-align:center;
+}
