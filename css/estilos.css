@@ -1,26 +1,59 @@
+@charset"UTF-8";
 /*reset (básico) do css*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 /*corpo da página*/
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Quicksand', sans-serif;
   height: 100vh;
-  background-color:rgba(245, 245, 245, 0.4);
+  background-color:rgb(255, 213, 30);
 }
 a{
   text-decoration:none;
 }
 a:hover{
 color: blue;
+
+}
+h1{
+  font-family: 'Pacifico', cursive;
+}
+h2{
+  font-family: 'Quicksand', sans-serif;
+}
+h3{
+  font-family: 'Quicksand', sans-serif;
 }
 p{
   text-indent: 50px;
   text-align: justify;
+  font-family: 'Slabo 27px', serif;
+  font: size 20pt;
+}
 
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+    background-image: none;
+ }
 }
 
 /*"PARTE DE CIMA DA PÁGINA" - cabeçalho, introdução e menu*/
@@ -31,17 +64,25 @@ header {
   justify-content: center;
   flex-wrap: wrap;
 }
+
 /*introdução*/
-#hello-world{
-  color:rgb(3, 3, 36);
-  font-weight:bolder;
+#profile-pic {
+    position: absolute;
+    background-image:url('../img/profile.jpg');
+    max-width:200px;
+    max-height:200px;
+    width: auto;
+    height: auto;
+  }
+
+.hello-world {
+  color:#002495;
 }
+
 div.intro {
   position: absolute;
-  display: flexbox;
-  top:140px;
-  align-self: baseline;
-  padding: 10px;
+  padding: 100px;
+  justify-content: center;
   
 }
 .site-title {
@@ -54,21 +95,32 @@ div.intro {
   text-align: center;
   font-size: 2em;
 }
+
 /*menu principal*/
 nav.menu {
-  position: relative;
-  top: auto;
-  width: 50vw;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  position:absolute;
+  top:-10px;
+  width: 100vw;
+  align-self:flex-start;
+  background-color:white;
+}
+.menu h1 {
   align-self:center;
+  padding-left:5rem;
+  color:#002495;
 }
 .menu ul {
   display: flex;
-  justify-content: space-around;
+  align-self: center;
+  justify-content: flex-start;
 }
 .menu li {
-  list-style: none;
-  background-color: rgba(245, 245, 245, 0.1);
-    padding: 3px;
+    list-style: none;
+   background-color: rgba(245, 245, 245, 0.1);
+    padding: 12px;
     margin: 0.5px;
     border: .3px solid rgba(245, 245, 245, 0.4);
     -webkit-transition: background-color .3s;
@@ -78,29 +130,70 @@ nav.menu {
 }
 .menu li:hover{
   background-color: rgba(245, 245, 245,.8);
-  border: .1px solid white; 
+  border: .1px solid white;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 1px 1px whitesmoke;
 }
 nav.menu a {
-  padding: 3px;
+  display:block;
+  padding:10px;
   text-decoration: none;
 }
 /*Section e seus artigos*/
-div.interface-artigos{
-    
+div.articles-interface{
     width:auto;
     height:max-content;
     background-color:white;
     padding:30px;
     box-shadow: 0px 0px 5px white;
 }
+/*Projects and images*/
+.projects{
+  height:100vh;
+  padding: 2em;
+}
+.projects h2{
+  margin-bottom: 1.5em;
+  font-size:2em;
+}
+.img-portfolio {
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+}
+@media(min-width:1200px){
+  .img-portfolio {
+    height: 10em;
+    width: 100%;
+  } 
+}
+.projects-grid {
+  display:grid;
+  gap: 2em;
+  justify-content:center;
+  }
+@media(min-width:560px) {
+  .projects-grid{
+  grid-template-columns: repeat(2,260px);
+  }
+}
+@media(min-width:880px) {
+  .projects-grid{
+  grid-template-columns:repeat(3,260px);
+  align-content:center;
+  height:calc(100vh - 4 em - 48px -1.5em);
+  background-color:deeppink;
+  }
+}
+.projects-grid figure {
+  text-align:center;
+}
 /*Rodapé*/
-.rodape{
+.rodape {
   padding: 30px;
   margin-top: 20px;
 }
-.rodape p{
+.rodape p {
   text-indent:0px;
   text-align:center;
 }

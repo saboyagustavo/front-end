@@ -6,29 +6,36 @@
 	<title>Gustavo Saboya | Art Director, Jr. Front-End Developer</title>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<link rel='stylesheet' type='text/css' media='screen' href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500&family=Slabo+27px&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <header>
 	<div class='intro'>
-		<h1 id="hello-world"><a href='#'>Olá!</a></h1>
-		<h1 class="site-title">Eu sou Gustavo, Diretor de Arte e Desenvolvedor Front-End JR.</h1>
-		<h2 class="site-subtitle">Concebo e executo soluções criativas.</h2>
+		<!--aqui entrará a imagem de perfil, redondinha-->
+		<div id="profile-pic"></div>
+		<h1 id="hello-world"><a class="hello-world" href='#'>Olá,<br>Mundo!</a></h1>
+		
+		<h2 class="site-title">Eu sou Gustavo, Diretor de Arte e<br>Desenvolvedor Front-End jr.</h2>
+		<h3 class="site-subtitle">Concebo e executo<br>soluções criativas.</h3>
 	</div>
 	<nav class="menu">
-		<ul>
-			<li><a href='#'>Sobre</a></li>
-			<li><a href='#'>Portfólio</a></li>
-			<li><a href='#'>Vamos conversar</a></li>
-		</ul>
+			<h1 id="logo"><a href="#">Saboya.art</a></h1>
+			<ul>
+				<li><a href='#'>Início</a></li>
+				<li><a href='index.html#about'>Sobre</a></li>
+				<li><a href='index.html#projects'>Portfólio</a></li>
+				<li><a href='index.html#contact-me'>Vamos conversar</a></li>
+			</ul>
 	</nav>
 </header>
-	<div class='interface-artigos'>
-	<section class='about'>
-		<article class='presentation'>
-			<p>
-			Nasci poeta, mas a vida me apresentou muitas novas formas de expressar. Comecei minha jornada profissional na arte, onde descobri que posso projetar sensações, não apenas através do estímulo visual mas também do sonoro, criando espaços sensíveis.</p><br>
+	<div class='articles-interface'>
+	<section class='presentation'>
+		<article id='about'>
+			<h3>Nasci poeta, mas a vida me apresentou muitas novas formas de expressar</h3><br>
+			<p>Comecei minha jornada profissional na arte, onde descobri que posso projetar sensações, não apenas através do estímulo visual mas também pelas sonoridades, criando espaços sensíveis.</p><br>
 
-			<p>Fiz cenário de cinema; atuei; fiz sonoplastia e curadoria musical no rádio AM; atuei e desenhei performances; concebi estéticas teatrais; apresentei e bati bons papos em uma série de podcasts sobre festivais de música.</p><br>
+			<p>Fiz direção de arte para cinema; fiz sonoplastia e curadoria musical no rádio; atuei e desenhei performances; concebi estéticas teatrais; apresentei e bati bons papos em uma série de podcasts sobre festivais de música.</p><br>
 			
 			<p>Sendo entusiasta de novas teconlogias e amante da inovação, fui convidado a coordenar por um ano a equipe de marketing e vendas da Bronze Cruzeiro, e-commerce de cosméticos.</p><br>
 
@@ -37,7 +44,38 @@
 		</article>
 	</section>
 	</div>
+	<div id="projects"></div>
+	<section class="projects">
+		<h2>Portfólio</h2>
+		<div class="projects-grid">
+		<figure>
+			<img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
+			<figcaption>WEB</figcaption>
+		</figure>
+		<figure>
+			<img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt="Mobile">
+			<figcaption>Mídia</figcaption>
+		</figure>
+		<figure>
+			<img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
+			<figcaption>Áudio</figcaption>
+		</figure>
+		<figure>
+			<img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
+			<figcaption>Cinema</figcaption>
+		</figure>
+		<figure>
+			<img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
+			<figcaption>Teatro</figcaption>
+		</figure>
+		<figure>
+			<img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
+			<figcaption>Ópera</figcaption>
+		</figure>
+		</div>
+	</section>
 	<div class="rodape">
+		<div id="contact-me"></div>		
 	<footer>
 		<p>Copyright 2020 - SaboyaGT<br>
 		<a href="mailto:saboya.gustavo@gmail.com">você pode me mandar um e-mail</a><br>
